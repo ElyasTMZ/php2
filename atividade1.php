@@ -1,22 +1,23 @@
 <?php 
-$nome = array("maria", "joao", "fernando", "pedro", "laercio", "fabio", "antonio", "elyas", "nove", "dez");
-$nota = array(7, 7, 7, 8, 9, 8, 6, 10, 5, 8);
-$soma = array_sum($nota);
-$bign = 10;
+$notas = array (8, 2, 8, 9, 3, 4,9, 5, 10, 6);
+$alunos = array ("Maria" ,"Zeca", "Pedro","Paulo" ,"Alessandro","Zé" ,"Antonio","Thiago" ,"Elyas" ,"Paula");
 
-echo("a media das notas é:".$soma /10.);
+$temp = 0;
+$soma = 0;
+$maiornota = 0;
 
-function notamaior($nota, $bign){
-	$maior = 0;
-	if ($nota > $bign ) {
-			
-			$maior = $nota;
-			$nota = $bign;
-			$bign = $maior; 
-		}
-
-	return $nota;
+foreach ($notas as $nota){
+	
+	if($nota > $maiornota){
+		$temp = $nota;
+		$nota = $maiornota;
+		$maiornota = $temp;
 }
+$soma = $nota + $nota / 10;
+}
+echo ($maiornota. "<br/>");
+echo ("a media das notas é: $soma");
 
-echo($nota)
+
  ?>
+
